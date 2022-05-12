@@ -1,7 +1,7 @@
 @extends('layouts.app');
 
 @section('titulo')
-    Editar Perfil: {{ auth()->user()->username }}
+    Edit Profile: {{ auth()->user()->username }}
 @endsection
 
 @section('contenido')
@@ -20,13 +20,13 @@
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> {{ $message }} </p>
                     @enderror
 
-                    <label for="imagen" class="mb-2 block uppercase text-gray-500 font-bold">Imagen Perfil</label>                    
+                    <label for="imagen" class="mb-2 block uppercase text-gray-500 font-bold">Profile Image</label>                    
                     <input 
                         id="imagen" name="imagen" type="file" accept=".png, .jpg, .jpeg"
                         class="border p-3 w-full rounded-lg"               
                     >             
 
-                    <input type="submit" value="Guardar Cambios" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer 
+                    <input type="submit" value="Save Changes" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer 
                 uppercase font-bod w-full p-3 text-white rounder-lg">
 
             </form>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Inicia Sesión en DevsTagram
+    Sign in to DevsTagram
 @endsection
 
 @section('contenido')
@@ -20,7 +20,7 @@
                  
                 <div class="mb-5">
                     <label for="email" class="mb-2 block uppercase text-gray-500 font-bold"> Email: </label>
-                    <input id="email" name="email" type="text" placeholder="Tu Email de Registro" class="border p-3 w-full rounded-lg
+                    <input id="email" name="email" type="text" placeholder="Your registration email" class="border p-3 w-full rounded-lg
                     @error('email') border-red-500 @enderror" value={{ old('email') }}>
                     @error('email')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> {{ $message }} </p>
@@ -29,7 +29,7 @@
 
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold"> Password: </label>
-                    <input id="password" name="password" type="password" placeholder="Tu Password de Registro" class="border p-3 w-full rounded-lg
+                    <input id="password" name="password" type="password" placeholder="Your registration password" class="border p-3 w-full rounded-lg
                     @error('password') border-red-500 @enderror">
                     @error('password')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center"> {{ $message }} </p>
@@ -37,10 +37,10 @@
                 </div>
                 
                 <div class="mb-5">
-                    <input type="checkbox" name="remember"> <label class="uppercase text-gray-500 text-sm"> mi sesión abierta </label>   
+                    <input type="checkbox" name="remember"> <label class="uppercase text-gray-500 text-sm"> Keep my session open </label>   
                 </div>
 
-                <input type="submit" value="Iniciar Sesión" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer 
+                <input type="submit" value="Log In" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer 
                         uppercase font-bod w-full p-3 text-white rounder-lg">
 
             </form>

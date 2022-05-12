@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo') 
-    Perfil {{ $user->username }}
+    Profile {{ $user->username }}
 @endsection
 
 @section('contenido')
@@ -32,10 +32,10 @@
                 </div>
 
                 <p class="text-gray-800 text-sm mb-3 font-bold mt-5">
-                    {{ $user->followers->count() }}  <span class="font-normal"> @choice('Seguidor|Seguidores', $user->followers->count()) </span> 
+                    {{ $user->followers->count() }}  <span class="font-normal"> @choice('Follower|Followers', $user->followers->count()) </span> 
                 </p>
                 <p class="text-gray-800 text-sm mb-3 font-bold mt-5">
-                    {{ $user->following->count() }}  <span class="font-normal"> Siguiendo </span> 
+                    {{ $user->following->count() }}  <span class="font-normal"> Following </span> 
                 </p>
                 <p class="text-gray-800 text-sm mb-3 font-bold mt-5">
                     {{ $user->posts->count() }} <span class="font-normal"> Posts </span>
@@ -65,7 +65,7 @@
     </div>
 
     <section class="container mx-auto mt-10">
-        <h2 class="text-4xl text-center font-black my-10" > Publicaciones </h2>
+        <h2 class="text-4xl text-center font-black my-10" > Posts </h2>
         <x-listar-post :posts="$posts" />
     </section>
 @endsection

@@ -40,7 +40,7 @@
         <div class="md:w-1/2 p-5 ">
             <div class="shadow bg-white p-5 mb-5">
                 @auth                                  
-                    <p class="text-xl font-bold text-center mb-4" > Agrega un nuevo comentario </p>
+                    <p class="text-xl font-bold text-center mb-4" > Add a comment </p>
 
                     @if(session('mensaje'))
                         <div class="bg-green-500 p-2 rounded-lg mb-6 text-white text-center uppercase font-bold">
@@ -52,7 +52,7 @@
                         @csrf
                         
                         <label for="comentario" class="mb-2 block uppercase text-gray-500 font-bold"> 
-                            Añade un Comentario: 
+                            Add a comment: 
                         </label>                    
                         <textarea 
                             id="comentario" 
@@ -82,7 +82,7 @@
                             </div>
                         @endforeach
                     @else
-                        <p class="p-10 text-center">No hay comentarios aún</p>
+                        <p class="p-10 text-center">There is no comment yet</p>
                     @endif
                 </div>
             </div>
